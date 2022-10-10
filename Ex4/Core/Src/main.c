@@ -70,7 +70,6 @@ void display7SEG(int num){
   		case 3:
   			HAL_GPIO_WritePin(GPIOA, A_Pin|B_Pin|C_Pin|D_Pin|G_Pin, GPIO_PIN_RESET);
   			break;
-
   		case 4:
   			HAL_GPIO_WritePin(GPIOA, B_Pin|C_Pin|F_Pin|G_Pin, GPIO_PIN_RESET);
   			break;

@@ -58,7 +58,7 @@ static void MX_GPIO_Init(void);
 void clearAllClock(){ //Function to turn of 12 LEDs
 	HAL_GPIO_WritePin(GPIOA, LED0_Pin|LED1_Pin|LED2_Pin|LED3_Pin
 		                           |LED4_Pin|LED5_Pin|LED6_Pin|LED7_Pin
-		                           |LED8_Pin|LED9_Pin|LED10_Pin|LED11_Pin, GPIO_PIN_RESET);
+		                           |LED8_Pin|LED9_Pin|LED10_Pin|LED11_Pin, RESET);
 }
 
 void setNumberOnCLock(int num){ //Function to turn on the appropriate LED
@@ -163,7 +163,6 @@ void clearNumberOnClock(int num){ //Function to turn off the appropriate LED
 			HAL_GPIO_WritePin(GPIOA, LED11_Pin, RESET);
 		break;
 	}
-
 }
 /* USER CODE END 0 */
 
@@ -202,12 +201,8 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   int hour = 0, minute = 0, second = 0;
-
   while (1)
   {
-//	  HAL_GPIO_WritePin(GPIOA, LED0_Pin|LED1_Pin|LED2_Pin|LED3_Pin
-//	                           |LED4_Pin|LED5_Pin|LED6_Pin|LED7_Pin
-//	                           |LED8_Pin|LED9_Pin|LED10_Pin|LED11_Pin, GPIO_PIN_RESET);
 	clearAllClock();
 	int minute1 = minute, second1 = second;
 	minute1 /= 5;

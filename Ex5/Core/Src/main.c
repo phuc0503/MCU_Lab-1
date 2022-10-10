@@ -157,9 +157,9 @@ int main(void)
 		  HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin);
 		  HAL_GPIO_TogglePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin);
 	  }
-	  //if(count < 0)	count = 9;
+
 	  display7SEG(count--);
-	  //count--;
+
 	  HAL_Delay(1000);
 
     /* USER CODE END WHILE */
